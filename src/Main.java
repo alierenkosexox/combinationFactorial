@@ -1,15 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Scanner input = new Scanner(System.in);
+        double numN,numR, factN=1, factR=1, factS=1;    // describe data
+
+        System.out.print("N sayısını girin : ");            //input N number
+        numN = input.nextDouble();
+
+        System.out.print("R sayısını girin : ");          //input R number
+        numR = input.nextDouble();
+
+
+        for(int x=1; x<=numN; x++) {factN *=x;}     //N number factorial
+        for(int y=1; y<=numR; y++) {factR *=y;}      //R number factorial
+        for(int z=1; z<=(numN-numR); z++) {factS *=z;}  //n-r factorial
+
+        System.out.println("Result C(n , r): " + factN/(factR*factS));  //C(n,r)
     }
-}
+}  // Ali Eren KÖSE 24/02/2024  19:28
+
+
+
